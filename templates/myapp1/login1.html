@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/log_in" method="POST">
+    {% csrf_token %}
+  <div class="container">
+      <label for="email"><b>Usder ID</b></label>
+    <input type="text" placeholder="User Name" name="userid" id="userid" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+
+    <button type="submit" class="registerbtn">Sign IN</button>
+
+  </div>
+</form>
+
+</body>
+</html>

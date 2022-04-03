@@ -1,0 +1,297 @@
+{% extends 'myapp1/base.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<!-- Mirrored from gnodesign.com/templates/movify/movie-grid3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Mar 2022 05:20:30 GMT -->
+<head>
+      <meta charset="UTF-8">
+
+    <!-- ===== Mobile viewport optimized ===== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no">
+
+    <!-- ===== Meta Tags - Description for Search Engine purposes ===== -->
+    <meta name="description" content="Movify - Movies, Series & Cinema HTML Template">
+    <meta name="keywords" content="movies, series, online streaming, html template, cinema html template">
+    <meta name="author" content="GnoDesign">
+
+    <!-- ===== Website Title ===== -->
+    <title>Movify - Movies, Series & Cinema HTML Template</title>
+
+    <!-- ===== Favicon & Different size apple touch icons ===== -->
+    <link rel="shortcut icon" href={% static 'assets/images/favicon.png' %}>
+    <link rel="apple-touch-icon" sizes="57x57" href={% static 'assets/images/apple-touch-icon-iphone.png' %}>
+    <link rel="apple-touch-icon" sizes="76x76" href={% static 'assets/images/apple-touch-icon-ipad.png' %}>
+    <link rel="apple-touch-icon" sizes="120x120" href={% static 'assets/images/apple-touch-icon-iphone-retina.png' %}>
+    <link rel="apple-touch-icon" sizes="152x152" href={% static 'assets/images/apple-touch-icon-ipad-retina.png' %}>
+    <link rel="apple-touch-icon" sizes="167x167" href={% static 'assets/images/apple-touch-icon-ipad-pro.png' %}>
+    <link rel="apple-touch-icon" sizes="180x180" href={% static 'assets/images/apple-touch-icon-iphone-6-plus.png' %}>
+    <link rel="icon" sizes="192x192" href={% static 'assets/images/icon-hd.png' %}>
+    <link rel="icon" sizes="128x128" href={% static 'assets/images/icon.png' %}>
+
+    <!-- ===== Google Fonts ===== -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+    <!-- ===== CSS links ===== -->
+    <link rel="stylesheet" type="text/css" href={% static 'assets/css/bootstrap.min.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'assets/revolution/css/settings.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'assets/revolution/css/layers.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'assets/revolution/css/navigation.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'assets/css/magnific-popup.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'assets/css/jquery.mmenu.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'assets/css/owl.carousel.min.css' %}>
+
+    <link rel="stylesheet" type="text/css" href={% static 'assets/css/style.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'assets/css/responsive.css' %}>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  {% block latest_movie %}
+
+
+    <!-- =============== START OF PRELOADER =============== -->
+
+    <!-- =============== END OF PRELOADER =============== -->
+
+
+
+    <!-- =============== START OF RESPONSIVE - MAIN NAV =============== -->
+    <nav id="main-mobile-nav"></nav>
+    <!-- =============== END OF RESPONSIVE - MAIN NAV =============== -->
+
+
+
+    <!-- =============== START OF WRAPPER =============== -->
+    <div class="wrapper">
+
+
+        <!-- =============== START OF HEADER NAVIGATION =============== -->
+        <!-- Insert the class "sticky" in the header if you want a sticky header -->
+
+        <!-- =============== END OF HEADER NAVIGATION =============== -->
+
+
+
+        <!-- =============== START OF PAGE HEADER =============== -->
+        <section class="page-header overlay-gradient" style="background: url(assets/images/posters/movie-collection.jpg);">
+            <div class="container">
+                <div class="inner">
+                    <h2 class="title">Movie Grid 3</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Movie Grid 3</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <!-- =============== END OF PAGE HEADER =============== -->
+
+
+
+        <!-- =============== START OF MAIN =============== -->
+        <main class="bg-light ptb100">
+            <div class="container">
+
+                <!-- Start of Filters -->
+                <div class="row mb50">
+
+                    <div class="col-md-6">
+                        <!-- Layout Switcher -->
+                        <div class="layout-switcher">
+                            <a href="movie-list.html" class="list"><i class="fa fa-align-justify"></i></a>
+                            <a href="movie-grid.html" class="grid active"><i class="fa fa-th"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <!-- Sort by -->
+                        <div class="sort-by">
+                            <div class="sort-by-select">
+                                <select class="chosen-select-no-single">
+                                    <a href="{% url 'movie_list' %}"><option>All Movies</option></a>
+                                    <a href="{% url 'movie_list1' 'Bollywood'%}"><option>Bollywood</option></a>
+                                     <a href="{% url 'movie_list1' 'Hollywood'%}"><option>Hollywood</option></a>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Sort by / End -->
+
+                    </div>
+
+                </div>
+                <!-- End of Filters -->
+
+
+
+                <!-- Start of Movie List -->
+
+                <div class="row">
+{% for ml in topm %}
+                    <!-- Movie List Item -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="movie-box-3 mb30">
+                            <div class="listing-container">
+
+                                <!-- Movie List Image -->
+                                <div class="listing-image">
+                                    <!-- Image -->
+                                    <img src={{ ml.m_img.url }} >
+                                </div>
+
+                                <!-- Movie List Content -->
+                                <div class="listing-content">
+                                    <div class="inner">
+
+                                        <!-- Play Button -->
+                                        <div class="play-btn">
+                                            <a href="{{ ml.m_trailer }}" class="play-video">
+                                                <i class="fa fa-play"></i>
+                                            </a>
+                                        </div>
+
+                                        <h2 class="title">{{ ml.m_name }}</h2>
+
+                                        <!-- Rating -->
+                                        <div class="stars">
+                                            <div class="rating">
+                                                <i class="fa fa-star"></i>
+                                                <span>7.5/10</span>
+                                                <span class="category">{{ ml.m_type }}</span>
+                                            </div>
+                                        </div>
+
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam...</p>
+
+                                        <a href="{% url 'movie_d' ml.id %}" class="btn btn-main btn-effect">details</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+ {% endfor %}
+                    <!-- Movie List Item -->
+
+
+                    <!-- Movie List Item -->
+
+
+                                <!-- Movie List Content -->
+
+                <!-- End of Movie List -->
+
+
+
+                <!-- Start of Pagination -->
+               {% comment %} <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <nav class="pagination">
+                            <ul>
+                                <li><a href="#" class="current-page">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#"><i class="ti-angle-right"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>{% endcomment %}
+                <!-- End of Pagination -->
+
+            </div>
+
+        </main>
+        <!-- =============== END OF MAIN =============== -->
+
+
+
+        <!-- =============== START OF FOOTER =============== -->
+
+        <!-- =============== END OF FOOTER =============== -->
+
+    </div>
+    <!-- =============== END OF WRAPPER =============== -->
+
+
+
+
+    <!-- =============== START OF GENERAL SEARCH WRAPPER =============== -->
+    <div class="general-search-wrapper">
+        <form class="general-search" role="search" method="get" action="#">
+            <input type="text" placeholder="Type and hit enter...">
+            <span id="general-search-close" class="ti-close toggle-search"></span>
+        </form>
+    </div>
+    <!-- =============== END OF GENERAL SEARCH WRAPPER =============== -->
+
+
+
+    <!-- =============== START OF LOGIN & REGISTER POPUP =============== -->
+
+    <!-- =============== END OF LOGIN & REGISTER POPUP =============== -->
+
+
+
+    <!-- ===== Start of Back to Top Button ===== -->
+    <div id="backtotop">
+        <a href="#"></a>
+    </div>
+    <!-- ===== End of Back to Top Button ===== -->
+  {% endblock latest_movie %}
+
+
+
+    <script src={% static 'assets/js/jquery-3.2.1.min.js' %}></script>
+    <script src={% static 'assets/js/bootstrap.min.js' %}></script>
+    <script src={% static 'assets/js/jquery.ajaxchimp.js' %}></script>
+    <script src={% static 'assets/js/jquery.magnific-popup.min.js' %}></script>
+    <script src={% static 'assets/js/jquery.mmenu.js' %}></script>
+    <script src={% static 'assets/js/jquery.inview.min.js' %}></script>
+    <script src={% static 'assets/js/jquery.countTo.min.js' %}></script>
+    <script src={% static 'assets/js/jquery.countdown.min.js' %}></script>
+    <script src={% static 'assets/js/owl.carousel.min.js' %}></script>
+    <script src={% static 'assets/js/imagesloaded.pkgd.min.js' %}></script>
+    <script src={% static 'assets/js/isotope.pkgd.min.js' %}></script>
+    <script src={% static 'assets/js/headroom.js' %}></script>
+    <script src={% static 'assets/js/custom.js' %}></script>
+
+    <!-- ===== Slider Revolution core JavaScript files ===== -->
+    <script type="text/javascript" src={% static 'assets/js/custom.js' %}"assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src={% static 'assets/js/custom.js' %}"assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- ===== Slider Revolution extension scripts ===== -->
+    <script type="text/javascript" src={% static 'assets/revolution/js/extensions/revolution.extension.actions.min.js' %}></script>
+    <script type="text/javascript" src={% static 'assets/revolution/js/extensions/revolution.extension.carousel.min.js' %}></script>
+    <script type="text/javascript" src={% static 'assets/revolution/js/extensions/revolution.extension.kenburn.min.js' %}></script>
+    <script type="text/javascript" src={% static 'assets/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}></script>
+    <script type="text/javascript" src={% static 'assets/revolution/js/extensions/revolution.extension.migration.min.js' %}></script>
+    <script type="text/javascript" src={% static 'assets/revolution/js/extensions/revolution.extension.navigation.min.js' %}></script>
+    <script type="text/javascript" src={% static 'assets/revolution/js/extensions/revolution.extension.parallax.min.js' %}></script>
+    <script type="text/javascript" src={% static 'assets/revolution/js/extensions/revolution.extension.slideanims.min.js' %}></script>
+    <script type="text/javascript" src={% static 'assets/revolution/js/extensions/revolution.extension.video.min.js' %}></script>
+</body>
+
+
+
+<!-- Mirrored from gnodesign.com/templates/movify/movie-grid3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 Mar 2022 05:20:30 GMT -->
+</html>
